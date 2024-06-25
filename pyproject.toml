@@ -11,7 +11,7 @@ requires-python = ">=3.10"
 license = "MIT"
 keywords = []
 authors = [
-  { name = "David Nicholson", email = "NickleDave@users.noreply.github.com" },
+  { name = "NickleDave", email = "NickleDave@users.noreply.github.com" },
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -30,31 +30,31 @@ dependencies = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/David Nicholson/dogpy#readme"
-Issues = "https://github.com/David Nicholson/dogpy/issues"
-Source = "https://github.com/David Nicholson/dogpy"
+Documentation = "https://github.com/NickleDave/pawpy#readme"
+Issues = "https://github.com/NickleDave/pawpy/issues"
+Source = "https://github.com/NickleDave/pawpy"
 
 [tool.hatch.version]
-path = "src/dogpy/__about__.py"
+path = "src/pawpy/__about__.py"
 
 [tool.hatch.envs.types]
 extra-dependencies = [
   "mypy>=1.0.0",
 ]
 [tool.hatch.envs.types.scripts]
-check = "mypy --install-types --non-interactive {args:src/dogpy tests}"
+check = "mypy --install-types --non-interactive {args:src/pawpy tests}"
 
 [tool.coverage.run]
-source_pkgs = ["dogpy", "tests"]
+source_pkgs = ["pawpy", "tests"]
 branch = true
 parallel = true
 omit = [
-  "src/dogpy/__about__.py",
+  "src/pawpy/__about__.py",
 ]
 
 [tool.coverage.paths]
-dogpy = ["src/dogpy", "*/dogpy/src/dogpy"]
-tests = ["tests", "*/dogpy/tests"]
+pawpy = ["src/pawpy", "*/pawpy/src/pawpy"]
+tests = ["tests", "*/pawpy/tests"]
 
 [tool.coverage.report]
 exclude_lines = [

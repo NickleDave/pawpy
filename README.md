@@ -1,7 +1,7 @@
-# dogpy
+# pawpy
 
-[![PyPI - Version](https://img.shields.io/pypi/v/dogpy.svg)](https://pypi.org/project/dogpy)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/dogpy.svg)](https://pypi.org/project/dogpy)
+[![PyPI - Version](https://img.shields.io/pypi/v/pawpy.svg)](https://pypi.org/project/pawpy)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pawpy.svg)](https://pypi.org/project/pawpy)
 
 -----
 
@@ -13,9 +13,9 @@
 ## Installation
 
 ```console
-pip install dogpy
+pip install pawpy
 ```
 
 ## License
 
-`dogpy` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+`pawpy` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
