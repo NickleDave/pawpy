@@ -1,0 +1,64 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pawpy"
+version = "0.1"
+description = 'Core package for computational dog science'
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "David Nicholson", email = "NickleDave@users.noreply.github.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "numpy>=2.0",
+  "scipy>=1.18",
+]
+
+[project.urls]
+Documentation = "https://github.com/David Nicholson/dogpy#readme"
+Issues = "https://github.com/David Nicholson/dogpy/issues"
+Source = "https://github.com/David Nicholson/dogpy"
+
+[tool.hatch.version]
+path = "src/dogpy/__about__.py"
+
+[tool.hatch.envs.types]
+extra-dependencies = [
+  "mypy>=1.0.0",
+]
+[tool.hatch.envs.types.scripts]
+check = "mypy --install-types --non-interactive {args:src/dogpy tests}"
+
+[tool.coverage.run]
+source_pkgs = ["dogpy", "tests"]
+branch = true
+parallel = true
+omit = [
+  "src/dogpy/__about__.py",
+]
+
+[tool.coverage.paths]
+dogpy = ["src/dogpy", "*/dogpy/src/dogpy"]
+tests = ["tests", "*/dogpy/tests"]
+
+[tool.coverage.report]
+exclude_lines = [
+  "no cov",
+  "if __name__ == .__main__.:",
+  "if TYPE_CHECKING:",
+]
